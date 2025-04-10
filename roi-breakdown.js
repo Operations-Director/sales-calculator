@@ -41,16 +41,15 @@ document.getElementById("roi-breakdown").innerHTML = `
     </div>
   </div>
 
-    <div class="extra-info">
-      <div><strong>With Improved Systems & Processes:</strong></div>
-      <div>You could generate an additional <strong>£${formatMoney(additionalSales10)} to £${formatMoney(additionalSales20)}</strong> in annual sales.</div>
-      <div>You could generate an additional <strong>£${formatMoney(additionalProfit10)} to £${formatMoney(additionalProfit20)}</strong> in annual profit.</div>
-    </div>
+  <div class="extra-info">
+    <div><strong>With Improved Systems & Processes:</strong></div>
+    <div>You could generate an additional <strong>£${formatMoney(additionalSales10)} to £${formatMoney(additionalSales20)}</strong> in annual sales.</div>
+    <div>You could generate an additional <strong>£${formatMoney(additionalProfit10)} to £${formatMoney(additionalProfit20)}</strong> in annual profit.</div>
+  </div>
 
-    <div class="roi-info">
-      <div><strong>Let us do the work for you with Digital Operations Director for as little as a 
-        <span style="color:#00b7c2;">£${formatMoney(investment)}</span> investment</strong></div>
-      <div>and get your return within <strong>${roiMin.toFixed(2)} to ${roiMax.toFixed(2)} years</strong>.</div>
-    </div>
-  `;
-}
+  <div class="roi-info">
+    <div><strong>Let us do the work for you with Digital Operations Director for as little as a 
+      <span>£${formatMoney(investment)}</span> investment</strong></div>
+    <div>and get your return within <strong>${roiMin.toFixed(2)} to ${roiMax.toFixed(2)} years</strong>.</div>
+  </div>
+`;
