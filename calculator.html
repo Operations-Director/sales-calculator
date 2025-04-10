@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sales Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+    }
+    .calculator, .roi-breakdown {
+      width: 100%;
+      max-width: 450px;
+    }
+    label, input, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .extra-info {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .roi-info {
+      background: #e8f5e9;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="roi-breakdown" id="roi-breakdown"></div>
+
+  <div class="calculator">
+    <label for="leads">Average # Leads per Month:</label>
+    <input type="number" id="leads" value="80" />
+
+    <label for="sales">Average # Sales per Month:</label>
+    <input type="number" id="sales" value="1" />
+
+    <label for="price">Average Sales Price (£):</label>
+    <input type="number" id="price" value="6000" />
+
+    <label for="margin">Profit Margin %:</label>
+    <input type="number" id="margin" value="60" />
+
+    <button onclick="calculateAll()">Calculate</button>
+
+    <div class="results" id="results"></div>
+  </div>
+
+  <script src="base-calculator.js"></script>
+  <script src="roi-breakdown.js"></script>
+
+</body>
+</html>
