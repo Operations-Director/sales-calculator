@@ -21,35 +21,36 @@ function calculateROI(leads, sales, price, margin, annualSales, annualProfit) {
   const formatMoney = (amount) =>
     parseFloat(amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
 
-document.getElementById("roi-breakdown").innerHTML = `
-  <div class="results">
-    <div class="increase-row">
-      <div class="increase-block">
-        <div><strong>10% Increase:</strong></div>
-        <div>Leads per Month: ${leads10.toFixed(0)}</div>
-        <div>Sales per Month: ${sales10.toFixed(1)}</div>
-        <div>Annual Sales: £${formatMoney(annualSales10)}</div>
-        <div>Annual Profit: £${formatMoney(annualProfit10)}</div>
-      </div>
-      <div class="increase-block">
-        <div><strong>20% Increase:</strong></div>
-        <div>Leads per Month: ${leads20.toFixed(0)}</div>
-        <div>Sales per Month: ${sales20.toFixed(1)}</div>
-        <div>Annual Sales: £${formatMoney(annualSales20)}</div>
-        <div>Annual Profit: £${formatMoney(annualProfit20)}</div>
+  document.getElementById("roi-breakdown").innerHTML = `
+    <div class="results">
+      <div class="increase-row">
+        <div class="increase-block">
+          <div><strong>10% Increase:</strong></div>
+          <div>Leads per Month: ${leads10.toFixed(0)}</div>
+          <div>Sales per Month: ${sales10.toFixed(1)}</div>
+          <div>Annual Sales: £${formatMoney(annualSales10)}</div>
+          <div>Annual Profit: £${formatMoney(annualProfit10)}</div>
+        </div>
+        <div class="increase-block">
+          <div><strong>20% Increase:</strong></div>
+          <div>Leads per Month: ${leads20.toFixed(0)}</div>
+          <div>Sales per Month: ${sales20.toFixed(1)}</div>
+          <div>Annual Sales: £${formatMoney(annualSales20)}</div>
+          <div>Annual Profit: £${formatMoney(annualProfit20)}</div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="extra-info">
-    <div><strong>With Improved Systems & Processes:</strong></div>
-    <div>You could generate an additional <strong>£${formatMoney(additionalSales10)} to £${formatMoney(additionalSales20)}</strong> in annual sales.</div>
-    <div>You could generate an additional <strong>£${formatMoney(additionalProfit10)} to £${formatMoney(additionalProfit20)}</strong> in annual profit.</div>
-  </div>
+    <div class="extra-info">
+      <div><strong>With Improved Systems & Processes:</strong></div>
+      <div>You could generate an additional <strong>£${formatMoney(additionalSales10)} to £${formatMoney(additionalSales20)}</strong> in annual sales.</div>
+      <div>You could generate an additional <strong>£${formatMoney(additionalProfit10)} to £${formatMoney(additionalProfit20)}</strong> in annual profit.</div>
+    </div>
 
-  <div class="roi-info">
-    <div><strong>Let us do the work for you with Digital Operations Director for as little as a 
-      <span>£${formatMoney(investment)}</span> investment</strong></div>
-    <div>and get your return within <strong>${roiMin.toFixed(2)} to ${roiMax.toFixed(2)} years</strong>.</div>
-  </div>
-`;
+    <div class="roi-info">
+      <div><strong>Let us do the work for you with Digital Operations Director for as little as a 
+        <span>£${formatMoney(investment)}</span> investment</strong></div>
+      <div>and get your return within <strong>${roiMin.toFixed(2)} to ${roiMax.toFixed(2)} years</strong>.</div>
+    </div>
+  `;
+}
